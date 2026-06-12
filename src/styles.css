@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
 :root {
   --bg: #fff7f8;
   --rose: #e94c73;
@@ -64,7 +66,7 @@ main { min-height: 100vh; overflow-x: hidden; }
 }
 .hero h1 {
   margin: 0;
-  font-family: 'Great Vibes', cursive;
+  font-family: "Story Script", sans-serif;
   font-size: clamp(4rem, 17vw, 8rem);
   line-height: .9;
   color: var(--rose-dark);
@@ -123,7 +125,7 @@ button:hover { transform: translateY(-2px); filter: brightness(1.03); }
 }
 .intro h2 {
   margin: 12px 0 10px;
-  font-family: 'Great Vibes', cursive;
+  font-family: "Story Script", sans-serif;
   font-size: clamp(3.2rem, 11vw, 5.4rem);
   line-height: .9;
   color: var(--rose-dark);
@@ -284,19 +286,17 @@ button:hover { transform: translateY(-2px); filter: brightness(1.03); }
     0 2px 0 rgba(255,255,255,.8) inset;
   transform: rotate(-2deg);
   z-index: 2;
-  animation: aparecer linear both;
-  animation-timeline: view();
-  animation-range: entry 10% cover 32%;
+  opacity: 1;
 }
 .direita .polaroid { transform: rotate(2deg); }
 .polaroid::before {
   content: '';
   position: absolute;
-  top: 13px;
-  width: 40px;
-  height: 22px;
+  top: -10px;
+  width: 44px;
+  height: 20px;
   border-radius: 2px;
-  background: rgba(255, 244, 218, .76);
+  background: rgba(255, 244, 218, .84);
   box-shadow: 0 3px 7px rgba(80, 44, 34, .11);
   z-index: 3;
 }
@@ -315,10 +315,12 @@ button:hover { transform: translateY(-2px); filter: brightness(1.03); }
   object-fit: cover;
   border-radius: 4px;
   background: #f6dce4;
+  filter: none;
+  opacity: 1;
 }
 .polaroid h3 {
   margin: 18px 0 8px;
-  font-family: 'Great Vibes', cursive;
+  font-family: "Story Script", sans-serif;
   font-size: 2rem;
   color: var(--rose-dark);
 }
@@ -346,7 +348,7 @@ button:hover { transform: translateY(-2px); filter: brightness(1.03); }
 }
 .final h2 {
   margin: 0 0 24px;
-  font-family: 'Great Vibes', cursive;
+  font-family: "Story Script", sans-serif;
   font-size: clamp(2.8rem, 10vw, 5rem);
   line-height: .95;
   color: var(--rose-dark);

@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
 
 const CONFIG = {
   nome1: 'Murilo',
   nome2: 'Maria',
-  fraseInicial: 'Algumas histórias são tão bonitas que merecem ser guardadas para sempre.',
+  fraseInicial: 'Alguns momentos que foram tão especiais que merecem ser guardados para sempre !',
   textoFinal: `Meu amor, cada foto aqui é só uma pequena parte de tudo que eu sinto por você. Obrigado por ser carinho, parceria, paz e sonho dentro da minha vida. Eu amo viver ao seu lado e quero continuar construindo memórias lindas com você.`,
-  perguntaFinal: 'Você aceita continuar sendo a namorada dos meus sonhos?'
+  perguntaFinal: 'Você aceita continuar sendo a namorada dos meus sonhos?',
+  musicaFundo: '/audio/Djavan%20-%20Um%20Amor%20Puro%20(%C3%81udio%20Oficial)%20%5BAf7ieNv0wXY%5D.mp3'
 }
 
 const momentos = [
@@ -61,6 +62,46 @@ const momentos = [
     titulo: '04/03/2023',
     texto: 'O dia que decidimos mostrar para o mundo o nosso amor, e a foto que eu particularmente mais amo ness mundo !'
   },
+  {
+    imagem: '/fotos/M&MReveillon.png',
+    titulo: 'Nosso Reveillon',
+    texto: 'O nosso Reveillon em Aruanã, o amor ao sentir que passei mais um ano ao lado da pessoa mais importante da minha vida, não foi apenas uma viagem, foi um filme !'
+  },
+  {
+    imagem: '/fotos/M&MRioQuente.jpeg',
+    titulo: 'RioQuente',
+    texto: 'Essa com certeza foi a viajem mais especial das nossas vidas, onde o amor evoluiu para algo ainda mais especial. Onde um dos momentos mais únicos das nossas vidas aconteceu !'
+  },
+  {
+    imagem: '/fotos/M&MAviao.png',
+    titulo: 'Viagem de Aviao',
+    texto: 'Nem o céu nos segurou, nossa primeira viagem de avião, onde fomos viver uma experiência incrível no RJ ! Nossa primeira de muitas !'
+  },
+  {
+    imagem: '/fotos/M&MRio.jpeg',
+    titulo: 'Rio de Janeiro',
+    texto: 'Em solo carioca, em uma noite muito especial com a presença do amor da minha vida !'
+  },
+  {
+    imagem: '/fotos/M&MPizza.jpeg',
+    titulo: 'Pizzaaaaaaa',
+    texto: 'Nós enchendo o panduzinho com algo que quase nem gostamos de comer rsrs !'
+  },
+  {
+    imagem: '/fotos/M&MBurger.jpeg',
+    titulo: 'Apenas Amor',
+    texto: 'Apenas amor, loucos apaixonados !'
+  },
+  {
+    imagem: '/fotos/M&MFluxo.jpeg',
+    titulo: 'Uma selfie Linda',
+    texto: 'Uma selfie linda que tiramos recentemente em um dia muito especial onde vimos uma cabra entrar em uma casa de show kkkkkk !'
+  },
+  {
+    imagem: '/fotos/M&MCamisinha.jpeg',
+    titulo: 'Para Fechar',
+    texto: 'Simplismente é essa a garota mais divertida, amorosa, elegante, bonita, cheirosa e paciente que eu poderia ter encontrado na minha vida. Te amo meu docinho de coco branco !'
+  },
 ]
 
 const coracoesVaral = [
@@ -89,16 +130,28 @@ const brilhosVaral = [
 
 function App() {
   const [abriu, setAbriu] = useState(false)
+  const audioRef = useRef(null)
+
+  const abrirSurpresa = () => {
+    setAbriu(true)
+
+    if (audioRef.current) {
+      audioRef.current.volume = 0.35
+      audioRef.current.play().catch(() => {})
+    }
+  }
 
   return (
     <main>
+      <audio ref={audioRef} src={CONFIG.musicaFundo} loop preload="auto" />
+
       {!abriu && (
         <section className="hero">
           <div className="heroCard">
             <p className="eyebrow">Feliz Dia dos Namorados</p>
             <h1>{CONFIG.nome1} & {CONFIG.nome2}</h1>
             <p className="frase">{CONFIG.fraseInicial}</p>
-            <button onClick={() => setAbriu(true)}>Abrir surpresa</button>
+            <button onClick={abrirSurpresa}>Abrir surpresa</button>
           </div>
           <div className="coracao c1">♥</div>
           <div className="coracao c2">♥</div>
@@ -109,7 +162,7 @@ function App() {
       <section className={`conteudo ${abriu ? 'visivel' : ''}`}>
         <header className="intro">
           <span>nossas memórias</span>
-          <h2>Um varal de momentos que eu amo viver com você</h2>
+          <h2>Um presente para podermos relambrar os nosso melhores momentos !</h2>
           <p>Role devagar. Cada foto tem um pedacinho do que eu sinto por você.</p>
         </header>
 
