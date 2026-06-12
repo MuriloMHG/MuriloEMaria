@@ -4,7 +4,7 @@ import './styles.css'
 
 const CONFIG = {
   nome1: 'Murilo',
-  nome2: 'Nome dela',
+  nome2: 'Maria',
   fraseInicial: 'Algumas histórias são tão bonitas que merecem ser guardadas para sempre.',
   textoFinal: `Meu amor, cada foto aqui é só uma pequena parte de tudo que eu sinto por você. Obrigado por ser carinho, parceria, paz e sonho dentro da minha vida. Eu amo viver ao seu lado e quero continuar construindo memórias lindas com você.`,
   perguntaFinal: 'Você aceita continuar sendo a namorada dos meus sonhos?'
@@ -12,30 +12,55 @@ const CONFIG = {
 
 const momentos = [
   {
-    imagem: '/fotos/foto-01.jpg',
-    titulo: 'Nosso começo',
-    texto: 'Esse momento me lembra como tudo começou de um jeito especial e como, desde então, você se tornou uma das partes mais bonitas da minha vida.'
+    imagem: '/fotos/M&M01.jpeg',
+    titulo: 'Nossa primeira foto',
+    texto: 'Nesse dia, na salinha de estudos, logo após nos beijarmos a nossa 01 das fotos, onde tudo começou !'
   },
   {
-    imagem: '/fotos/foto-02.jpg',
-    titulo: 'Um dia inesquecível',
-    texto: 'Tem dias que ficam guardados no coração. Esse é um deles. Um daqueles momentos simples, mas cheios de significado.'
+    imagem: '/fotos/M&MJeronimno.jpeg',
+    titulo: '16/10/2022',
+    texto: 'O nosso primeiro date, a noite mais inesquecível do universo, e onde a nossa história só estava começando !'
   },
   {
-    imagem: '/fotos/foto-03.jpg',
-    titulo: 'Meu lugar favorito',
-    texto: 'Não importa muito o lugar. Quando estou com você, tudo fica mais leve, bonito e especial.'
+    imagem: '/fotos/M&MLinguinha.jpeg',
+    titulo: 'A Linguinha',
+    texto: 'Nem precisa dizer muita coisa, é apenas por isso que eu te amo !'
   },
   {
-    imagem: '/fotos/foto-04.jpg',
-    titulo: 'Nós dois',
-    texto: 'Gosto da forma como a gente combina, ri, conversa e transforma momentos comuns em lembranças que eu quero guardar para sempre.'
+    imagem: '/fotos/M&MConversa.jpeg',
+    titulo: 'Nossa Primeira Conversa',
+    texto: 'O momento onde tivemos a nossa primeira conversa profunda sobre a vida, medos, inseguranças, desejos, sonhos e amor. E que no final foi a melhor conversa que poderia existir.'
   },
   {
-    imagem: '/fotos/foto-05.jpg',
-    titulo: 'Para sempre lembrar',
-    texto: 'Essa foto representa um pedacinho da nossa história. E eu espero que ainda venham muitos outros capítulos lindos pela frente.'
-  }
+    imagem: '/fotos/M&MBixona.jpeg',
+    titulo: 'O Brownie',
+    texto: 'O primeiro presente, o primeiro bilhete, simplesmente o dia que eu quis gritar de felicidade por ter recebi o melhor presente possível da melhor pessoa possível !'
+  },
+  {
+    imagem: '/fotos/M&MColar.jpeg',
+    titulo: '25/10/2022',
+    texto: 'O dia em que recebi a foto com o sorriso mais lindo do mundo, usando o primeiro presente que dei para ela, o colar de coracao !'
+  },
+  {
+    imagem: '/fotos/M&MAnel.png',
+    titulo: 'O Anel',
+    texto: 'A garota mais linda do mundo, seu sorriso e sua primeira aliança em uma só foto !'
+  },
+  {
+    imagem: '/fotos/M&MVanGhog.jpeg',
+    titulo: 'VanGhog',
+    texto: 'O dia em que até mesmo os girassóis mais belos de Van Ghog sumiram com o brilho da beleza da garota mais linda do mundo !'
+  },
+  {
+    imagem: '/fotos/M&MPecuaria.jpeg',
+    titulo: 'Pecuaria',
+    texto: 'Nosso primeiro show, um momento que eu sempre quis compartilhar com a pessoa mais especial da minha vida !'
+  },
+  {
+    imagem: '/fotos/M&MPrimeiroPost.png',
+    titulo: '04/03/2023',
+    texto: 'O dia que decidimos mostrar para o mundo o nosso amor, e a foto que eu particularmente mais amo ness mundo !'
+  },
 ]
 
 const coracoesVaral = [
@@ -138,8 +163,8 @@ function App() {
           <p>{CONFIG.textoFinal}</p>
           <h2>{CONFIG.perguntaFinal}</h2>
           <div className="botoesFinais">
-            <button onClick={() => alert('Eu te amo! 💖')}>Sim, para sempre</button>
-            <button className="ghost" onClick={() => alert('Resposta errada, tente de novo 😅💘')}>Também sim</button>
+            <button onClick={() => alert('Eu te amo! 💖')}>Sim</button>
+            <button className="ghost" onClick={() => alert('Te AMOOOOOOOO !')}>Claro</button>
           </div>
         </section>
       </section>
